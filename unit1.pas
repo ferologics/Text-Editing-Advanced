@@ -5,14 +5,31 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Edit1: TEdit;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { private declarations }
+    var str:string;
+    var ch,unevenChar:char;
+    var numOfWords,wordPosition:integer;
   public
     { public declarations }
+
   end;
 
 var
@@ -22,5 +39,79 @@ implementation
 
 {$R *.lfm}
 
+{ TForm1 }
+var i:integer;
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+   str:= Form1.Edit1.Text;
+   for i:=0 to length(str) do
+       begin
+            ch:= str[i];
+            case ch of
+                 'A'..'Z': str[i]:= char( (ord(ch) + 32) );
+            end;
+       end;
+Form1.Memo1.Lines.Add(str);
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  Form1.Memo1.Clear;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+   str:= Form1.Edit1.Text;
+   for i:=0 to length(str) do
+       begin
+            ch:= str[i];
+            case ch of
+                 'a'..'z': str[i]:= char( (ord(ch) - 32) );
+            end;
+       end;
+Form1.Memo1.Lines.Add(str);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+   str:= Form1.Edit1.Text;
+   for i:= 1 to length(str) do
+       begin
+            ch:= str[i];
+       end;
+end;
+
 end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

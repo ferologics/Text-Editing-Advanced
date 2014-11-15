@@ -1,11 +1,12 @@
 object Form1: TForm1
   Left = 278
   Height = 593
-  Top = 111
+  Top = 209
   Width = 602
   Caption = 'Form1'
   ClientHeight = 593
   ClientWidth = 602
+  OnCreate = Button2Click
   LCLVersion = '1.2.4.0'
   object Edit1: TEdit
     Left = 8
@@ -16,8 +17,8 @@ object Form1: TForm1
   end
   object Memo1: TMemo
     Left = 8
-    Height = 418
-    Top = 166
+    Height = 456
+    Top = 128
     Width = 586
     Lines.Strings = (
       'Memo1'
@@ -30,7 +31,7 @@ object Form1: TForm1
     Height = 16
     Top = 48
     Width = 201
-    Caption = 'bigChar to smallChar'
+    Caption = 'convert bigChar to smallChar'
     OnClick = Button1Click
     TabOrder = 2
   end
@@ -38,17 +39,17 @@ object Form1: TForm1
     Left = 221
     Height = 16
     Top = 48
-    Width = 181
+    Width = 180
     Caption = 'Clear memo'
     OnClick = Button2Click
     TabOrder = 3
   end
   object Button3: TButton
-    Left = 408
+    Left = 409
     Height = 16
     Top = 48
     Width = 185
-    Caption = 'smallChar to bigChar'
+    Caption = 'convert smallChar to bigChar'
     OnClick = Button3Click
     TabOrder = 4
   end
@@ -60,5 +61,47 @@ object Form1: TForm1
     Caption = 'swap even with uneven chars in word'
     OnClick = Button4Click
     TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 221
+    Height = 15
+    Top = 73
+    Width = 180
+    Caption = 'count number of words in string'
+    OnClick = Button5Click
+    TabOrder = 6
+  end
+  object Button6: TButton
+    Left = 409
+    Height = 15
+    Top = 73
+    Width = 185
+    Caption = 'word according to its index'
+    OnClick = Button6Click
+    TabOrder = 7
+  end
+  object Button7: TButton
+    Left = 221
+    Height = 16
+    Top = 96
+    Width = 180
+    Caption = 'write each word on a new line'
+    OnClick = Button7Click
+    TabOrder = 8
+  end
+  object Edit2: TEdit
+    Left = 552
+    Height = 22
+    Top = 96
+    Width = 42
+    TabOrder = 9
+  end
+  object Label1: TLabel
+    Left = 409
+    Height = 16
+    Top = 96
+    Width = 133
+    Caption = 'Enter index here -->'
+    ParentColor = False
   end
 end

@@ -148,7 +148,6 @@ end;
 procedure TForm1.Button7Click(Sender: TObject);
 begin // write each word in string on new line
    str         := (Form1.Edit1.Text + '  ');
-   word        := '';
    inWord      := 0;
    numOfWords  := 0;
 
@@ -156,15 +155,15 @@ begin // write each word in string on new line
        ch:= str[i];
        case ch of
             'a'..'z','A'..'Z','0'..'9': begin
-                                           word += string(ch);
+                                           word += ch;
                                            if (inWord = 0) then inWord:= 1;
                                         end;
 
                                    ' ': begin
                                            if (inWord = 1) then
                                               begin
-                                                 Form1.Memo1.Lines.Add(word);
-                                                 //word:= '';
+                                                 Form1.Memo1.Lines.Add('HOVNO ty blbecek');
+                                                 word:= '';
                                                  inWord:= 0;
                                               end;
                                         end;

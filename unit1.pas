@@ -155,7 +155,7 @@ begin // write each word in string on new line
        ch:= str[i];
        case ch of
             'a'..'z','A'..'Z','0'..'9': begin
-                                           word += string(ch);
+                                           word += ch;
                                            if (inWord = 0) then inWord:= 1;
                                         end;
 
@@ -163,7 +163,7 @@ begin // write each word in string on new line
                                            if (inWord = 1) then
                                               begin
                                                  Form1.Memo1.Lines.Add(word);
-                                                 //word:= '';
+                                                 word:= '';
                                                  inWord:= 0;
                                               end;
                                         end;

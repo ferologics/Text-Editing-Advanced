@@ -162,7 +162,7 @@ begin // write each word in string on new line
                                    ' ': begin
                                            if (inWord = 1) then
                                               begin
-                                                 Form1.Memo1.Lines.Add('HOVNO ty blbecek');
+                                                 Form1.Memo1.Lines.Add(word);
                                                  word:= '';
                                                  inWord:= 0;
                                               end;

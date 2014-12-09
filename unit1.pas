@@ -118,7 +118,7 @@ begin // write out words according to theyr index in string
    word        := '';
    inWord      := 0;
    numOfWords  := 0;
-   desiredIndex:= StrToInt(Form1.Edit2.Text);
+   desiredIndex:= StrToIntDef(Form1.Edit2.Text,0);
 
    for i:=0 to length(str) do
 
